@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-us">
+	<!-- Hi! This is just a "comment". It's as if this line of code doesn't even exist. The browser will just ignore it completely. -->
+	<!--
+		This is another comment, with the same effect, just formatted a little differently. The purpose of comments is to make documents of code more readable, either by others, or more likely by yourself in 3 months. They are *almost* never this verbose.
+
+		P.S. That first line, "<!doctype html>" tells the web browser we're using the most recent version of HTML. The second line is the opening tag for the "html" element, which goes the extra mile of indicating that this page is set in American English.
+	-->
+	<head>
+		<!--
+			So far, so good. HTML uses opening and closing tags like <p> and </p>. When you're working between those tags, you're "inside" that "element". Right now I'm writing to you from inside the "head" element, which in turn is inside the "html" element.
+		-->
+		<meta charset="utf-8">
+		<!--
+			^ That line is very helpful. It tells the web browser what text encoding to use. You'll pretty much always want to use this one, which will allow you to use characters like “”‘’ with abandon.
+		-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--
+			^ That line is also very helpful. It doesn't really have any effect on desktop web browsers, but on smartphones and tablets, if we didn't include that line, they would default to just shrinking down the desktop-sized website. This tells those browsers (that are really just trying to be helpful), "It's cool, I got this, just own your smaller screen size. Don't pretend to be something you're not." Without this we'd all still be using websites on our phones by zooming in and out all the time just to figure out what we're looking for in the first place.
+
+			Briefly: that tag enables us to make a responsive web page. More in "main.css".
+		-->
+		<title>Turanga Leela</title>
+		<!--
+			^ That's the "title", which is used as the label for the tab, and for search results on Google and DuckDuckGo if or when this page is available on the web and has been "crawled" by those search engines.
+		-->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<!--
+			^ That line lets us use a font from Google fonts, in this case two weights (normal and bold) of Source Sans Pro in their upright and italic styles. The full Google fonts library is available at https://www.google.com/fonts. This font will be referenced in the file called "main.css".
+		-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<!--
+			^ That line lets us use some icons on the page. More below.
+		-->
+		<link rel="stylesheet" href="main.css">
+		<!--
+			^ And that one connects to our CSS file, which will give the browser some instructions for how we'd like the page to look. Content goes in the HTML document, where it is structured, information about how to style that content goes in a separate CSS document. $10 name for this strategy: "Separation of Concerns".
+		-->
+	</head>
+	<!--
+		Phew! Finally out of the "head", now onto the "body".
+	-->
+	<body>
+		<!--
+			You probably noticed that nothing in the "head" had to do with the actual contents of the page. That's what the "body" is for. An HTML document has one "html" element that contains everything. Inside it goes one "head" for meta information and one "body" for content. That's it.
+
+			You may find it useful to think of it all as a tree. Here's an incomplete picture of this document's tree:
+
+			          html              
+			           +                
+			           |                
+			  +--------+--------+       
+			head               body     
+			 +                  +       
+			 |                  |       
+			 +             +----+---+   
+			title        header  article
+			               +            
+			               |            
+			             +-+-+          
+			             h1  h2
+
+			
+			Pretty, right? Thanks http://asciiflow.com
+		-->
+		<header>
+			<!--
+				What?? First "head" now "header"? Really easy to mix these two up. The "head" is always for meta information and is required. You can use as many "header" elements as you like once you're inside the "body". Trust me, just roll with it.
+			-->
+			<h1>Turanga Leela</h1>
+			<h2>Earth’s Worst Blernsball Player</h2>
+			<!--
+				^ There are six levels of these "heading" elements: h1, h2, h3, h4, h5, and h6. The "h1" element is for the most important headings on the page, "h2" for the second-most, "h3" for the third-most, etc. Usually only weirdos go past "h4".
+			-->
+		</header>
+		<article>
+			<a class="button" href="#">View my Portfolio</a>
+			<!--
+				^ That's a link, which I've given a class I decided to call button. In the "main.css", I'll be able to refer to any link with this class with ".button". Handy.
+
+				Right now, it doesn't link anywhere. The "#" in the href is a conventional way to do a little placeholder until you know where you're going to link to.
+
+				Try this: put a file in this folder and name it something like "portfolio.pdf". (It's actually important that the file name not include any spaces, and it's generally preferred that it be in all lowercase.) Then change the "#" to read "portfolio.pdf".
+			-->
+		</article>
+		<nav class="social">
+			<a href="http://twitter.com/">
+				<span class="fa fa-fw fa-twitter"></span>
+				<!--
+					^ Notice that this span element is empty? Those special classes are going to pull in an icon for Twitter from that CSS file we included in the "head" above.
+
+					More available icons here: http://fontawesome.io/icons/#brand
+
+					More info here: http://fontawesome.io/examples/
+				-->
+			</a>
+			<a href="http://linkedin.com/">
+				<span class="fa fa-fw fa-linkedin"></span>
+			</a>
+			<a href="http://medium.com/">
+				<span class="fa fa-fw fa-medium"></span>
+			</a>
+			<a href="http://tumblr.com/">
+				<span class="fa fa-fw fa-tumblr"></span>
+			</a>
+			<a href="http://dribbble.com/">
+				<span class="fa fa-fw fa-dribbble"></span>
+			</a>
+			<a href="http://behance.com/">
+				<span class="fa fa-fw fa-behance"></span>
+			</a>
+			<!--
+				^ Sweet Zombie Jesus, a pattern!
+
+				Try changing on of the links from:
+
+					<a href="...">...</a>
+
+				to
+
+					<a href="..." target="_blank">...</a>
+
+				Then click on that link in your browser and see what happens...
+			-->
+		</nav>
+	</body>
+	<!--
+		Don't forget to close the "body"...
+	-->
+</html>
+<!--
+	... and the "html" element.
+-->

@@ -1,0 +1,196 @@
+/*
+	
+	Deep breath.[1]
+
+	This is the CSS file, which stands for Cascading Style Sheets. The meaning of "Cascading" is lost to time[2], but the idea of Style Sheets should actually feel relatively familiar if you've ever used styles in a typesetting program like InDesign or Pages, or have been playing around with the text styles in Sketch.
+
+	Essentially, pieces of content are "marked up" in HTML, using conventional names like "nav", "p", "h1", "em", etc. along with any additional names that aren't part of the standard conventions, using something called classes.
+
+	In the HTML file, there's a <nav class="social">, for instance. That element is a "nav", which is an agreed-upon standard type of content you might include on a page. It also has a class of "social", which I've chosen in order to differentiate it from any other "nav" elements we might add to the page in the future.
+
+	If you'd like a fuller list of conventional standard tags, see:
+
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+	For a non-exhaustive list of potential class names to use, see:
+
+		http://www.oed.com
+
+	--------
+	[1] In case you hadn't already guessed, this is a comment in CSS. It uses a little different syntax than in HTML. For the sake of convenience Sublime Text (and most other text editors) will give you a comment block using the syntax of whatever language it thinks you're currently using when use use the shortcut command-/. If you'd like to try, do it when your cursor is somewhere not already inside a comment block.
+
+	[2] That's a total lie.
+
+*/
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+	text-align: center;
+}
+
+/*
+	
+	^ Woohoo! Our first bit of CSS. Let's break the syntax down first.
+
+	The first part, before the "{" is called the *selector*, in this case "body". That tells the browser which part(s) of the HTML document you're asking it to style. Since this says "body" and that element contains the entire contents of the viewable document, these rules are going to affect the whole page.
+
+	Inside the "{" and "}", we can place a series of rules; here there are two:
+
+			font-family: 'Source Sans Pro', sans-serif;
+			text-align: center;
+
+	Before the ":" we put the name of the *property* we'd like to change. Here, we're setting the "font-family" and "text-align" properties.
+
+	After the ":" comes the value we'd like to set that property to, ending in a ";".
+
+	"Source Sans Pro" should be available as a "web font" because we've asked it to be loaded from Google Fonts in the "head" of the HTML document. This isn't a perfect world, and not everything works properly all the time, so we use the "," to give a fallback of "sans-serif" -- a keyword which will trigger the browser to use whatever default sans-serif it has lying around.
+
+	The second rule, "text-align: center;", asks the browser to center-align all the text on the page. You might be able to guess what some of the other options for "text-align" are. Try a few out and see what happens.
+
+	The Mozilla Developer Network has a great CSS reference here:
+
+		https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+	It's a big list. Here's a more manageable list of properties to explore to get you started:
+
+	• background
+	• border
+	• color
+	• display
+	• font-family
+	• font-size
+	• font-style
+	• font-weight
+	• line-height
+	• list-style
+	• margin
+	• padding
+	• text-align
+	• text-decoration
+	• text-indent
+	• text-transform
+
+	That is, if you're interested of course.
+
+*/
+
+header {
+	margin-top: 3em;
+}
+header h2 {
+	color: #999;
+}
+/*
+	
+	^ In the rules for "header", we ask to give it headroom to the tune of "3em". There are many units we can use in CSS documents, and they usually look like "10px" or "1.5em" or "100%". It's never too early to start learning to use DuckDuckGo (or Google if you must) when you see code you aren't familiar with. Someone on the internet *is* familar and has probably argued about it with someone else on Stack Overflow.
+
+	The second selector above -- "header h2" -- asks the browser to find all "h2" elements that are inside of any "header" element. Refer back to the HTML document, and you'll see what I mean.
+
+	The "color" property refers to the color of the text specifically, and the value it's set to here, "#999", is a color encoded in hexadecimal -- or "hex" for short. I'm gonna be lazy and self-promoting all at once and just link here for more: http://fewd49.nevan.org/notes/colors/
+
+*/
+
+article {
+	margin: 3em 0;
+}
+
+a.button {
+	background: black;
+	color: white;
+	display: inline-block;
+	padding: 1em 3em;
+	text-decoration: none;
+	transition: background .2s;
+}
+/*
+	
+	^ The selector "a.button" means any "a" element with a class of "button".
+
+	If you're feeling curious, try changing the transition from ".2s" to "5s".
+
+*/
+a.button:hover {
+	background: #006699;
+}
+/*
+	
+	^ Adding ":hover" to the end gives us the ability to describe how something will change when a user hovers over it.
+
+*/
+
+.social {
+	font-size: 1.5em;
+	margin: 2em 0;
+}
+.social a {
+	color: black;
+	display: inline-block;
+	transition: color .2s;
+}
+.social a:hover {
+	color: #069;
+}
+/*
+
+	^ What do you think each of those selectors mean?
+
+*/
+
+
+/****************************************
+	
+	SPECIAL BONUS LEVEL: RESPONSIVE FUN TIME
+
+	If you've come this far, congrats!
+
+	Remember how in our HTML document we had this crazy line in the "head"?
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	Well, this is where that nonsense pays off.
+
+*****************************************/
+
+@media screen and (min-width: 35em) {
+	body {
+		font-size: 1.2em;
+	}
+	header {
+		margin-top: 20vh;
+	}
+}
+
+/*
+	
+	Try this: add "background: yellow;" as an additional rule on "body". You'll end up with something like:
+
+		body {
+			background: yellow;
+			font-size: 1.2em;
+		}
+
+	Save this file, and before you reload your browser, make it as narrow as it goes. Now, reload and start resizing your window wider and narrow, back and forth. See where the background changes from white to yellow? That threshold is defined above when the browser is more than 35em wide. Any CSS that goes in place of the "..." below will only be applied to the page when the browser is wider than 35em:
+
+		@media screen and (min-width: 35em) {
+			...
+		}
+
+	Think of the rules that go inside there as overrides. Nothing that remains the same need be repeated, it would be inherited. Just these extra rules get applied under certain conditions, potentially overriding rules declared earlier in the CSS document. Any rules not overridden simply get inherited. Oh wait -- is that what "Cascading" was talking about?
+
+	Why specify "screen" you ask? Well, try something like the following and see what happens when you print the page:
+
+		@media print {
+			body {
+				color: red;
+			}
+		}
+
+	(NOTE: If you try that, make sure NOT to place it inside of this comment, the other @media block, or any other CSS rules above. To be safe, just place it below this comment, you can always get rid of it later.)
+
+	Now take a brief moment to celebrate the fact that you can make the page look different at different sizes.
+
+	OK, maybe a little less brief than that. This little technique is a big deal:
+
+		http://responsivewebdesign.com/podcast/
+
+*/
