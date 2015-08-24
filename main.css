@@ -34,10 +34,12 @@ h2{
 }
 #name{
     font-size: 15pt;
+    text-align: left;
 }
 
 #logo{
     font-size: 24pt;
-    text-align: left;
+    text-align: right;
 }
+
 </style>
