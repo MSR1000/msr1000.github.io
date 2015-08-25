@@ -23,14 +23,13 @@ footer {
 
 #foottable
 {
-    background-color: white;
+    background-color: transparent;
     color:black;
     margin:25px;
     padding-left:25px;
     padding-right:25px;
-    border:1px solid black;
-    line-height: 36px;
-    font-family: 'Montserrat', sans-serif;
+    border:none;
+
 }
 #footname
  {
