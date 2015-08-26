@@ -5,11 +5,25 @@ header {
     text-align:center;
     padding:5px; 
 }
+body{
+    padding-left: 55px;
+}
+.jumbotron{
+    background-image: url(jumbotron.svg), none;
+}
 
 section {
-    width:350px;
+    width:755px;
+    font-family: 'Open Sans', sans-serif;
     float:left;
     padding:10px; 
+}
+#fancystyles{
+    clear: both;
+}
+#floatybox{
+    padding-left: 150px;
+    clear:both;
 }
 footer {
 
@@ -19,7 +33,10 @@ footer {
     text-align:center;
     padding:5px; 
 }
+h1{
+padding:5px;
 
+}
 
 #foottable
 {
