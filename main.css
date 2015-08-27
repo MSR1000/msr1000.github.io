@@ -6,10 +6,8 @@ header {
     padding:5px; 
 }
 body{
+    
     padding-left: 55px;
-}
-.jumbotron{
-    background-image: url(jumbotron.svg), none;
 }
 
 section {
