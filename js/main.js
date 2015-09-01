@@ -8,8 +8,5 @@ $(window).scroll(function() {
  $('#right-gear').css({ transformOrigin: '50% 50% 0px', transform: 'rotate(' + theta + 'rad)' });
 });
 
-
-
-
 });
 
