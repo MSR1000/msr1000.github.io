@@ -1,5 +1,5 @@
 body {
- background-color: #F1F1F1;
+ background-color: #F2F2F2;
 }
 h1{
 	font-family: Montserrat;
@@ -8,6 +8,7 @@ h1{
 	padding-top:100px;
 }
 .page-wrapper {
+	background-color: #F1F1F1;
  width: 850px;
  margin: auto;
 }
