@@ -5,6 +5,7 @@ body {
 }
 body {
   font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: #d3d3d3;
 }
 h1,
 h2,
@@ -27,7 +28,9 @@ p {
 }
 .container{
 	margin-bottom: 70px;
-	padding-top:15px;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	background: #ebebeb;
 }
 .flexxx{
 	display: flex;
