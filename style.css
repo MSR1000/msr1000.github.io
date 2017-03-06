@@ -64,6 +64,7 @@ p {
 .worktile:hover{
 	border-left: 1px black solid;
 	border-bottom: 1px black solid;
+	cursor: pointer;
 }
 .worktile img{
 	display: block;
