@@ -82,24 +82,21 @@ p {
 .remodal p{
 	text-align: left;
 }
-
-
-#lol .container{
-	color: #D3D3D3;
+.label{
+	opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
 }
-#lol a{
-	color:white;
+.contact a:hover .label{
+	opacity: 1;
 }
-
-#lol:hover{
-	background-color: #D3D3D3;
+.contact a h2{
+	font-size: 5em;
 }
 .white{
 	color: white;
 }
 .otherclients{
 	padding-top: 20px;
-}
-.otherclients {
-
 }
