@@ -32,7 +32,7 @@ p {
 
 .bg{
 	background: linear-gradient(130deg, #fcfcfc, #777777, #4c4c4c);
-	background-size: 400% 400%;
+	background-size: 450% 450%;
 	-webkit-animation: bg-pan-left 8s both;
     -moz-animation: bg-pan-left 8s both;
     animation: bg-pan-left 8s both;
