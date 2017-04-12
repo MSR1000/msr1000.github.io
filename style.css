@@ -64,11 +64,18 @@ h4 {font-size: 1.5em;}
 
 .header-content h1{
 	margin-top: 10vh;
-
 }
+
 .header-content span{
 	white-space: nowrap;
 }
+
+@media (max-width: 460px) { 
+.header-content span{
+	white-space: normal;
+}
+}
+
 .container{
 	margin-bottom: 70px;
 	padding-bottom: 30px;
