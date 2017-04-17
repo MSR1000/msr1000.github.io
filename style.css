@@ -46,7 +46,7 @@ a:hover {
 }
 
 .flatbg{
-	background-color: ##fcfcfc;
+	background-color: #efefef;
 	margin-top: 10vh;
 }
 
@@ -77,6 +77,9 @@ a:hover {
 	align-items: flex-start;
 	justify-content: space-around;
 	margin-top: 20px;
+}
+#about .button{
+	float:right;
 }
 #about .flexxx{
 	justify-content: flex-start;
