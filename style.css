@@ -41,8 +41,8 @@ h3 {font-size: 2.25em;}
 h4 {font-size: 1.5em;}
 
 a:hover {
-	text-decoration: none;
-	color: #FFDD53;
+	text-decoration: underline #FFDD53;
+	color: black;
 }
 
 .flatbg{
@@ -156,6 +156,10 @@ a:hover {
 	-webkit-transition: color 300ms ease;
     -ms-transition: color 300ms ease;
     transition: color 300ms ease;
+}
+.contact a:hover span{
+	text-decoration: underline #FFDD53;
+	color: black;
 }
 .otherclients{
 	padding-top: 20px;
