@@ -81,68 +81,32 @@ a:hover {
 	margin-top: 20px;
 }
 
-#about .button{
-	float:right;
+.label{
+  margin: 0px 0px 0px 0px;
+  padding: 14px 0px;
+  text-align: center;
+  display: inline-block;
 }
 
-#about .flexxx{
-	justify-content: flex-start;
+.label p{
+    margin: 0px 0px 0px 0px;
 }
 
-.skilltile{
-	display: block;
-	width: auto;
-	padding: 10px 10px 10px 10px;
-	border-left: 1px white solid;
-	border-bottom: 1px white solid;
-}
-
-.skilltile:hover{
-	border-left: 1px black solid;
-	border-bottom: 1px black solid;
-}
-
-.worktile{
-	display: inline-block;
-	width: auto;
-	min-width: 120px;
-	padding: 5px 5px 5px 5px;
-	border-left: 1px solid rgba(0, 0, 0, 0.2);
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.worktile:hover{
-	border-left: 1px black solid;
-	border-bottom: 1px black solid;
-	cursor: pointer;
-}
-
-.worktile img{
-	display: block;
-	z-index: -1;
-	max-height: 100px;
-	margin-bottom: 8px;
-	text-align: center;
-}
-
-.worktile span{
-	text-align: left;
-	white-space: nowrap;
-}
-
-.remodal p{
-	text-align: left;
+.label i{
+  font-size: 24px;
+  vertical-align: -10%;
 }
 
 .button {
-    background-color: #FFDD53;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 5px;
+  margin: 0px 0px 0px 0px;
+  background-color: #FFDD53;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .button p{
@@ -167,81 +131,6 @@ a:hover {
     transition: background-color 300ms ease;
 }
 
-
-.stickyflex{
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-start;
-	justify-content: space-around;
-	margin-top: 20px;
-}
-
-.sticky{
-	margin:1em;
-  float:left;
-
-}
-
-.sticky a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:11em;
-  width:11em;
-  padding:0.1em 1em 1em 1em;
-  -moz-box-shadow:0px 2px 10px #b1b1b1;
-  -webkit-box-shadow: 0px 2px 10px #b1b1b1;
-  box-shadow: 0px 2px 10px #b1b1b1;
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
-}
-
-.sticky a{
-  -webkit-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-  -moz-transform:rotate(-6deg);
-}
-.sticky:nth-child(even) a{
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
-}
-.sticky:nth-child(3n) a{
-  -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
-}
-.sticky:nth-child(5n) a{
-  -o-transform:rotate(5deg);
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  position:relative;
-  top:-10px;
-}
-.stickyflex a:hover,.stickyflex a:focus{
-  text-decoration:none;
-  box-shadow:8px 8px 10px #b1b1b1;
-  -moz-box-shadow:8px 8px 10px #b1b1b1;
-  -webkit-box-shadow: 8px 8px 10px #b1b1b1;
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  position:relative;
-  z-index:5;
-}
-ol{text-align:center;}
-ol li{display:inline;padding-right:1em;}
-ol li a{color:#fff;}
-
-
 .contact a h1{
 	margin: 0 0 0;
 	color: #639fff;
@@ -257,8 +146,4 @@ ol li a{color:#fff;}
 .contact a:hover span{
 	text-decoration: underline #FFDD53;
 	color: black;
-}
-
-.otherclients{
-	padding-top: 20px;
 }
