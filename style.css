@@ -139,7 +139,7 @@ a:hover {
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .contact a h1{
