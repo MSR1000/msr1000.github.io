@@ -46,6 +46,10 @@ a:hover {
 	color: black;
 }
 
+.fancy{
+  text-decoration: underline #FFDD53;
+  color: black;}
+
 .flatbg{
 	background-color: #efefef;
 	margin-top: 10vh;
@@ -83,20 +87,21 @@ a:hover {
 
 .label{
   margin: 0px 0px 0px 10px;
-  padding: 14px 0px;
+  padding: 0px;
   text-align: center;
   display: inline-block;
 }
 
-
+.date{
+  font-style: italic;
+}
 
 .label p{
     margin: 0px 0px 0px 0px;
 }
 
-.label i{
-  font-size: 24px;
-  vertical-align: -10%;
+.label svg{
+  vertical-align: -20%;
 }
 
 .button {
