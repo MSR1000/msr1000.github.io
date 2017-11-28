@@ -1,0 +1,528 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url("normalize.css");
+@import url("galaxie_polaris/GalaxiePolaris.css");
+
+
+/*
+grey 1 : #808080
+grey 2 : #b3b3b3
+pink : #f76547
+*/
+
+
+body{
+	font-family: "Galaxie Polaris", sans-serif; 
+	font-weight: 200; 
+	color: #333;
+	text-align: center;
+}
+
+
+
+/****** DEFAULT MISC. ******/
+
+
+	img{
+		line-height:0;
+		width: 100%;
+	}
+
+
+	.grey1{
+		color: #b3b3b3;
+	} 
+	.grey2{
+		color: #808080;
+	}
+	.pink{
+		color: #f76547;
+	}
+
+
+
+
+/************** NAVIGATION ****************/
+
+	nav{
+		position: fixed;
+		bottom:0;
+		right:0;
+		width:auto;
+		text-align: right;
+		line-height:1.43rem;
+		-webkit-transition:all 2s ease;
+		background-color: transparent;
+	}
+
+
+	/* Heart Hamburger + Parent Container */
+
+		#mobile_nav{  /* Heart Hamburger container */
+			display:inline-block;
+			text-align:right;
+			background-color: transparent;
+			padding:20px;
+			line-height: 0;
+		}
+
+		#mobile_nav div{   /* Heart Hamburger */
+			display: inline-block;
+			width: 70px; 
+			cursor: pointer;
+		}
+
+	
+	/*Menu Content + Container */
+
+		#menu_content{
+			list-style-type: none;
+			display: none;
+			background-color: #f76547;
+			margin:-2.3em 0 0; /*20px*/
+			padding:1.5625em 1.5625em .782em;
+		}
+
+		#menu_content.activated{
+			display: block;
+		}
+
+		#menu_content li{
+			padding:.391em 0 .391em .782em;
+			border-right: #f76547 solid .782em;
+		}
+
+		#menu_content li a{
+			color:#fff;
+		}
+
+		#menu_content li.active{
+			border-right: #fff solid .782em;
+		}
+
+
+
+/************** STRUCTURE ****************/
+
+
+	.main_container{
+		background-color:#fff;
+		margin:0 auto;
+		padding:45px 0;
+	}
+
+	header, article, footer{
+		text-align: left;
+		display: block;
+	}
+
+
+	/***** HEADER *******/
+
+		header{		
+			width:100%;
+			text-transform: uppercase;
+			color: #b3b3b3;
+			height:94vh; 
+			vertical-align: middle;
+			display: table-cell;
+			padding:0 5vw;
+		}
+
+
+
+	/***** CONTENT *******/
+
+		/* default article mostly serves as empty container */
+
+		article.long_text{
+			max-width: 800px;
+			margin:0 auto;
+			padding:1.5625em;
+		}
+
+		section{
+			display:inline-flex;
+			width: 100%;
+			align-items: flex-end
+		}
+
+		section > div{
+			width: 50%;
+			line-height: 0;
+		}
+
+		article:not(.long_text) section:nth-child(even) > div:first-child > div, 
+		article:not(.long_text) section:nth-child(even) > div:first-child > a div{
+			margin-left: auto;
+			margin-right:0;
+			text-align: right;
+		}
+
+		article:not(.long_text) section:nth-child(odd) > div:last-child > div{
+			margin-right: auto;
+			margin-left:0;
+		}
+
+		.txt_container{
+			max-width: 425px;
+			padding: 1.957em;
+		}
+
+
+	/***** FOOTER *******/
+
+
+	footer{
+		margin-top:1.5625em;
+		text-align: center;
+		display: none;
+	}
+
+	footer p{
+		font-size: x-small;
+		text-transform: uppercase;
+		margin:0;
+		padding:0;
+		color:#b3b3b3;
+	}
+
+
+
+
+/****** TYPOGRAPHY STYLES ******/
+
+
+	h1, h2, h3, h4, h5{
+		display: block;
+		font-weight: 200;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+
+	/* H1 */
+
+		h1{
+			width: 100%;
+			padding-left: 0;
+			text-align: left;
+			font-size:8vw;
+			margin-top:auto;
+			margin-bottom:9vh;
+			line-height: 1.175;
+			color: #f76547;
+		}
+
+		.home h1{
+			font-size:11vw;
+		}
+
+		span.dot{
+			padding:0 .2rem;
+		}
+
+
+   /* H2 + H3 */
+
+		h2, h3{
+			color: #f76547;
+			line-height: 1.3743;
+			margin:0;
+			width: 100%;
+		}
+
+		h2{
+			font-size: 3vw;
+		}
+
+		.long_text h2{
+			margin-bottom: .78125em;
+		}
+
+		article.long_text > h2:not(:first-child) {
+			margin-top:2.34375em;
+		}
+
+		.faq h2{
+			color: #808080;
+		}
+
+		h3{
+			font-size: 2vw;
+			margin: 1.175em 0;
+		}
+
+
+	/* p styles */
+
+		p{
+			display:block;
+			margin:0 0 1.5625em;
+			font-size:1.5vw;  /*16px for typography scale*/
+			line-height:1.5625;  /*25px for typography scale*/
+			width: 100%;
+		}
+
+	
+	/* Link Styles */
+
+		a{
+			color: #f76547;
+			text-decoration: none;	
+		}
+
+		a:hover{
+			cursor: pointer;
+		}
+
+		p a:hover{
+			text-decoration: underline;
+		}
+
+
+
+
+/************** PAGE-SPECIFIC ****************/
+
+
+
+	/** ABOUT US **/
+
+
+		.about_us_collage{
+			list-style-type: none;
+			margin: 0 0 1.5625em;
+			padding: 0;
+			-webkit-padding-start:0;
+			display:inline-flex;
+			flex-direction: row;
+		}
+
+		.about_us_collage li{
+			position: relative;
+			max-height: 376px;
+			margin-right: 1.5625em;
+		}
+
+		.about_us_collage li:last-of-type{
+			margin-right: 0;
+		}
+
+		.about_us_collage li img{
+			display: block;
+			width:100%;
+			max-height: 376px;
+			height: auto;
+		}
+
+	/* Overlay text affect on hover state*/
+
+		.overlay {
+			display: flex;
+			align-items:center;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: .5s ease;
+			background-color: rgba(75,75,75,0.85);
+		}
+
+		.about_us_collage li:hover .overlay, .about_us_collage li.touch_hover .overlay{
+		  opacity: 1;
+		}
+
+		/*.about_us_collage li:hover .overlay, .about_us_collage li:active .overlay, .about_us_collage li.touch_hover .overlay{
+			  opacity: 1;
+			}*/
+
+		.overlay p {
+			box-sizing: border-box;
+			padding:1.5625em 1.5625em 0 1.5625em;
+			color: #fff;
+		}
+
+		/*need to add for mobile */
+
+
+
+
+	/* REGISTRY */
+
+
+		.registry section{
+			align-items: flex-start;
+		}
+		.registry section div{
+			box-sizing: border-box;
+			padding-right:1.5625em;
+		}
+
+		.registry h1 + p{
+			margin-top:4.6875em;
+		}
+
+
+
+
+
+
+/***** I KNOW IT'S NOT MOBILE FIRST - I WAS TIRED AND LAZY :-( *****/
+
+@media (max-width: 900px){
+	
+
+	.main_container{
+		/*width: calc(100% - 7rem);
+		padding-left:3.5rem;
+		padding-right: 3.5rem*/
+		width:100%;
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	/* NAV */
+	
+	#mobile_nav div{
+		width: 55px;
+	}
+	
+	
+	.mobile_hide{
+	display: none;
+	}
+
+	
+	
+}
+
+
+
+
+@media (max-width: 665px){
+	
+	html{
+		font-size:15px;
+	}
+	
+	.main_container{
+		width: 100%;
+		padding:.782em 0;
+	}
+	
+	
+	/* HEADER */
+	
+	header{		
+		padding-bottom:.391em;
+	}
+	
+	.married{
+		padding-left: .782em;
+	}
+	
+	
+	/* NAV */
+	
+	#mobile_nav{
+		padding: .782em;
+	}
+	
+	#mobile_nav div{
+		width: 40px; 
+	}	
+	
+	/*HOME */
+	.txt_container{
+		padding: .782em;
+		margin-bottom:1.57em;
+	}
+	
+}
+
+
+
+@media (max-width: 600px){
+
+	
+	/*  Sections */
+	
+	section{
+		display: flex;
+		flex-direction: column;
+	}
+	section:nth-child(even), a section:nth-child(even){
+		flex-direction: column-reverse;
+	}
+	
+	section > div{
+		width: 100%;
+	}
+	
+	article:not(.long_text) section:nth-child(even) > div:first-child > div, 
+	article:not(.long_text) section:nth-child(even) > div:first-child > a div{
+		text-align: left;
+		margin-left:0;
+	}
+	
+	article.long_text{
+		padding:.78125em;
+	}
+	
+	
+	/* typography */
+	
+	h1{
+		font-size:2.25em;
+		margin-bottom:1.5625em;
+	}
+
+	.home h1{
+		font-size:3.5em;
+	}
+	
+	h2{
+		font-size: 1.5em;
+	}
+	
+	/*h2 .grey1 br{ 
+		display:none;
+	}*/
+	
+	
+	article.long_text > h2:not(:first-child){
+		margin-top:.78125em;
+	}
+	
+	h3{
+		font-size: 1.15em;
+	}
+
+	p{
+		font-size: 1rem;
+	}
+	
+	
+	/* about us */
+	
+	.about_us_collage{
+		margin-bottom: .78125em;
+	}
+	.about_us_collage li{
+		margin-right: .78125em;
+	}
+	
+	.overlay p {
+		box-sizing: border-box;
+		padding:.78225em .78125em 0 .78125em;
+		color: #fff;
+		font-size:x-small;
+	}
+	
+	
+	
+}
