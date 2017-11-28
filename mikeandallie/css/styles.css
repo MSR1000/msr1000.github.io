@@ -37,7 +37,7 @@ body{
 		color: #808080;
 	}
 	.pink{
-		color: #f76547;
+		color: #4781f7;
 	}
 
 
@@ -79,7 +79,7 @@ body{
 		#menu_content{
 			list-style-type: none;
 			display: none;
-			background-color: #f76547;
+			background-color: #4781f7;
 			margin:-2.3em 0 0; /*20px*/
 			padding:1.5625em 1.5625em .782em;
 		}
@@ -90,7 +90,7 @@ body{
 
 		#menu_content li{
 			padding:.391em 0 .391em .782em;
-			border-right: #f76547 solid .782em;
+			border-right: #4781f7 solid .782em;
 		}
 
 		#menu_content li a{
@@ -212,7 +212,7 @@ body{
 			margin-top:auto;
 			margin-bottom:9vh;
 			line-height: 1.175;
-			color: #f76547;
+			color: #4781f7;
 		}
 
 		.home h1{
@@ -227,7 +227,7 @@ body{
    /* H2 + H3 */
 
 		h2, h3{
-			color: #f76547;
+			color: #4781f7;
 			line-height: 1.3743;
 			margin:0;
 			width: 100%;
@@ -269,7 +269,7 @@ body{
 	/* Link Styles */
 
 		a{
-			color: #f76547;
+			color: #4781f7;
 			text-decoration: none;	
 		}
 
