@@ -87,6 +87,7 @@ a:hover {
 
 .label{
   margin: 0px 0px 0px 10px;
+  max-width: 31px;
   padding: 0px;
   text-align: center;
   display: inline-block;
